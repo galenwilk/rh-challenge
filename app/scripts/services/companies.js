@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc function
- * @name challengeApp.factory:CompanyFactory
+ * @name challengeApp.service:companyService
  * @description
- * # CompanyFactory
+ * # companyService
  * Factory of the challengeApp
  */
  angular.module('challengeApp')
@@ -12,6 +12,7 @@
     var that = this;
       this.companies = {};
 
+    // init the data request
     this.initCompanies = function(companyId) {
       // would be path to server
       $http.get('scripts/data/companies/' + companyId + '.json').success(function(data) {
@@ -20,7 +21,7 @@
         console.log('The request failed with response ' + response + 'and status ' + status);
       });
     };
-
+    // get the company after promise has been resolved
     this.getCompany = function() {
       return this.companies;
     };
