@@ -1,5 +1,7 @@
 # Challenge Project
 
+[Example App](http://galenwilk.com/rh-challenge/)
+
 ## Setup
 
 Install dependancies with NPM and Bower.
